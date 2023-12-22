@@ -1,0 +1,21 @@
+.App {
+  width: 75vw;
+  min-height: 75vh;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    width: 100vw;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .Slider {
+    padding: 20px;
+  }
+}

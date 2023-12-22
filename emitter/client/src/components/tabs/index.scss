@@ -1,0 +1,44 @@
+.tabs {
+    &__container {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid #d3d3d3;
+        height: 60px;
+    }
+
+    &__button {
+        padding: 20px;
+        height: 19px;
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            font-weight: bold;
+            color: gray;
+            margin: 2;
+            cursor: pointer;
+        }
+
+        &--active {
+            border-bottom: 3px solid #003060;
+
+            button {
+                color: #055C9D;
+            }
+        }
+    }
+
+    &__content {
+        padding: 20px 60px;
+    }
+
+    @media screen and (max-width: 770px) {
+        &__content {
+            padding: 0;
+        }
+    }
+}

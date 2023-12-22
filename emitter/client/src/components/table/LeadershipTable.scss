@@ -1,0 +1,17 @@
+.LeadershipTable {
+    &__avatar {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .overlay {
+        width: 100%;
+        height: 56px;
+        position: fixed;
+        border-radius: 1px;
+        background-image: linear-gradient(to right, transparent 90%, #d3d3d3);
+    }
+}
