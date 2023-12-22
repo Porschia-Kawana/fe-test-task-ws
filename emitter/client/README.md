@@ -19,3 +19,4 @@ The other tab is the SETTINGS tab, the user can click on this and it will displa
 ## Testing the app
 
 To run the test suite open a new terminal along with the existing ones and navigate to `emitter/client` and run `npm test a`.
+Or alternatively to run Cypress testing navigate to `emitter/client` and run `npm run cypress:open`.
