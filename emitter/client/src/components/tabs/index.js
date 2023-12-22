@@ -2,9 +2,12 @@ import "./index.scss";
 import React, { useEffect, useState } from "react";
 
 function Tabs(props) {
+    // If no props are passed the component will not be created
+    if (!props.tabs) throw new Error('You must pass through props to Tabs component.');
     const [tabs, setTabs] = useState(props.tabs)
     const [activeContent, setContent] = useState()
 
+    // When a tab is clicked it will update that button to be active while removing the active prop from the previous tab
     function clickTab(activeTab) {
         let updateActiveTab = tabs.map(tab => {
             if (tab.label === activeTab.label) tab.active = true
@@ -14,9 +17,10 @@ function Tabs(props) {
         setTabs(updateActiveTab)
     }
 
+    // When a tab is clicked it will find the appropriate content to match with the currently active tab via index
     useEffect(() => {
         const activeTabIdx = tabs.findIndex(tab => tab.active)
-        setContent(props.children[activeTabIdx])
+        if (props.children) setContent(props.children[activeTabIdx] || props.children[0])
     }, [tabs])
 
     return (
@@ -26,7 +30,7 @@ function Tabs(props) {
                     <div key={tab.label} className={`tabs__button ${tab.active ? "tabs__button--active" : ""}`}><button onClick={() => clickTab(tab)}>{tab.label}</button></div>
                 ))}
             </div>
-            <div className="tabs__content">{activeContent}</div>
+            {activeContent && <div className="tabs__content">{activeContent}</div>}
         </>
     );
 }

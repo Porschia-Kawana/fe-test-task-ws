@@ -1,26 +1,26 @@
 .tabs {
     &__container {
-        width: 100%;
-        display: flex;
         border-bottom: 1px solid #d3d3d3;
+        display: flex;
         height: 60px;
+        width: 100%;
     }
 
     &__button {
-        padding: 20px;
         height: 19px;
+        padding: 20px;
 
         button {
             background-color: transparent;
             border: none;
-            padding: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: gray;
+            cursor: pointer;
             font-size: 14px;
             font-weight: bold;
-            color: gray;
+            letter-spacing: 1px;
             margin: 2;
-            cursor: pointer;
+            padding: 0;
+            text-transform: uppercase;
         }
 
         &--active {
