@@ -13,3 +13,7 @@ const createRandomUser = () => ({
 });
 
 setInterval(() => io.emit("userData", createRandomUser()), 500);
+
+io.on('connection', (socket) => {
+    console.log('connected');
+})
