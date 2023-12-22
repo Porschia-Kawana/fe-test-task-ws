@@ -25,7 +25,7 @@ function Tabs(props) {
 
     return (
         <>
-            <div className="tabs__container">
+            <div data-cy="TabsComponent" className="tabs__container">
                 {tabs.map((tab) => (
                     <div key={tab.label} className={`tabs__button ${tab.active ? "tabs__button--active" : ""}`}><button onClick={() => clickTab(tab)}>{tab.label}</button></div>
                 ))}

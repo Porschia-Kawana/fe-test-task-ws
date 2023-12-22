@@ -62,7 +62,7 @@ export default function LeadershipTable(props) {
         <>
             <div className="overlay" />
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table data-cy="LeadershipTable" sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow className='LeadershipTable__header'>
                             <TableCell></TableCell>

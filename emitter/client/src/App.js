@@ -29,6 +29,7 @@ function App() {
         <div className="Slider">
           <strong>Limit</strong>
           <Slider
+            data-cy="LeadershipTable__Slider"
             aria-label="Table size limit"
             defaultValue={limit}
             step={1}
