@@ -17,3 +17,5 @@ Each row of the table has a delete button as they are removable.
 The other tab is the SETTINGS tab, the user can click on this and it will display a slider which gives the user the ability to set the number of entries on the leaderboard table from 1 to 20 entries and when they click back on to the LEADERBOARD tab will see their new settings implemented.
 
 ## Testing the app
+
+To run the test suite open a new terminal along with the existing ones and navigate to `emitter/client` and run `npm test a`.

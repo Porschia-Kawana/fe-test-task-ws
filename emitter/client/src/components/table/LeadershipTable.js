@@ -22,6 +22,7 @@ export default function LeadershipTable(props) {
     const [users, setUsers] = useState([])
     const [usersList, setUsersList] = useState([])
 
+    // Retrieves data from Socket.io
     useEffect(() => {
         const socket = io('http://localhost:3050');
 
@@ -37,6 +38,7 @@ export default function LeadershipTable(props) {
         }
     }, [])
 
+    // Sorts data by score parameter in descending order and slices by set limit
     useEffect(() => {
         function compareScores(a, b) {
             if (a.score > b.score) {
@@ -48,9 +50,10 @@ export default function LeadershipTable(props) {
         }
 
         const updatedUsersList = users.sort(compareScores)
-        setUsersList(updatedUsersList.slice(0, props.limit))
+        setUsersList(props.limit ? updatedUsersList.slice(0, props.limit) : updatedUsersList)
     }, [users])
 
+    // Removes user from stored data list
     function removeUser(toDelete) {
         setUsers(users => users.filter((user) => user.username !== toDelete.username))
     }
